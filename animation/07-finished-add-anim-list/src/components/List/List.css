@@ -1,0 +1,66 @@
+.List {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
+}
+
+.ListItem {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #521751;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ListItem:hover,
+.ListItem:active {
+  background-color: #ccc;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  animation: createItem 1s ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  animation: deleteItem 1s ease-out;
+}
+
+@keyframes createItem {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes deleteItem {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
